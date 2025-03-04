@@ -94,7 +94,7 @@ create_dog(15, 3, 2, 45, "out/assignment2.png")
 # Filter rays.png with a well chosen DoG ﬁlter
 DOG = create_dog(15, 5.5, 0.4, 75, "out/temp.png")
 strips = cv2.imread("img/rays.png", cv2.IMREAD_GRAYSCALE)
-filtered_strips = cv2.filter2D(strips, -1, DOG)
+filtered_strips = np.absolute(cv2.filter2D(strips, cv2.CV_64F, DOG))
 save_row([strips, filtered_strips], ["Strips", "Edges"], "out/assignment3.png")
 
 # -- assignment 4 --

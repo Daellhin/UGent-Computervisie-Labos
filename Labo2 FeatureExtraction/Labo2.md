@@ -22,7 +22,7 @@ def save_row(images: list, names: list, filename="out/temp.png"):
     cv2.imwrite(filename, addName(cv2.imread(filename)))
 ```
 
-## Exercise 2
+## Exercise 1
 ### Assignment 1
 > Use the Sobel operator to calculate the vertical first-order derivative. Ensure you capture and visualize the negative filter response values by using appropriate datatypes. Your result should look similar to the one shown in Figure 1.
 
@@ -35,6 +35,7 @@ cv2.imwrite("out/assignment1.png", addName(abs_sobel_vertical))
 
 ![alt text](out/assignment1.png)
 
+## Exercise 2
 ### Assignment 2
 > Create a 15x15 DoG filter using the workflow below.
 
