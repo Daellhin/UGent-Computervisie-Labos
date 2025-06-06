@@ -92,7 +92,7 @@ def assignment1():
     ax = fig.add_subplot(111, projection="3d")
     ax.plot(*vertices.T, marker="o", color="k", ls="")
     [ax.plot(*vertices[[start, end], :].T, color="r") for start, end in edges]
-    filename = "out/assignment1_3d.png"
+    filename = "out/assignement1_3d.png"
     plt.savefig(filename)
     cv2.imwrite(filename, addName(cv2.imread(filename)))
 
@@ -114,7 +114,7 @@ def assignment1():
         center = (int(point[0]), int(point[1]))
         cv2.circle(image, center, 5, (0, 0, 0), -1)
 
-    cv2.imwrite("out/assignment1_2d.png", addName(image))
+    cv2.imwrite("out/assignement1_2d.png", addName(image))
 
 
 
