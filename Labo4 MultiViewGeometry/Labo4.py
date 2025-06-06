@@ -1,3 +1,4 @@
+import os
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -174,6 +175,7 @@ def question3():
     print(theta_degrees)
 
 if __name__ == '__main__':
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     assignment1()
     assignment2()
     assignment3()

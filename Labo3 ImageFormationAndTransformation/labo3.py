@@ -1,4 +1,5 @@
 import math as m
+import os
 import random as r
 from multiprocessing import Pool
 
@@ -271,6 +272,7 @@ def assignment6():
     cv2.imwrite('out/assignment6.png', addName(warped))
 
 if __name__ == '__main__':
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     assignment1()
     assignment2()
     assignment3()

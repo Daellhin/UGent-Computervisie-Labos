@@ -23,14 +23,14 @@ discolored_image[:, :, 2] = discolored_image[:, :, 2] // 2
 
 cv2.imwrite('out/assignment2.jpg', addName(discolored_image))
 
-# -- assignment 3 --
+# -- Assignment 3 --
 # Discolor the image by doubling the intensity of the red value of every pixel
 doubled_red_image = clouds_image.copy()
 doubled_red_image[:, :, 2] = cv2.min(doubled_red_image[:, :, 2] * 2, 255)  # Clamp at 255
 
 cv2.imwrite('out/assignment3.jpg', addName(doubled_red_image))
 
-# -- assignment 4 --
+# -- Assignment 4 --
 # Make a regular grid of black dots on the image so that the dots are 10 pixels apart vertically and horizontally
 grid_image = clouds_image.copy()
 dot_spacing = 10
@@ -41,25 +41,25 @@ for y in range(10, height, dot_spacing):
 
 cv2.imwrite('out/assignment4.jpg', addName(grid_image))
 
-# -- assignment 5 --
+# -- Assignment 5 --
 # Convert the image to a grayscale image
 grayscale_image = cv2.cvtColor(clouds_image, cv2.COLOR_BGR2GRAY)
 
 cv2.imwrite('out/assignment5.jpg', addName(grayscale_image))
 
-# -- assignment 6 --
+# -- Assignment 6 --
 ## Threshold the grayscale image at 50% of the maximum value for this datatype.
 _, thresholded_image = cv2.threshold(grayscale_image, 127, 255, cv2.THRESH_BINARY)
 
 cv2.imwrite('out/assignment6.jpg', addName(thresholded_image))
 
-# -- assignment 7 --
+# -- Assignment 7 --
 # Threshold the grayscale image at the ideal threshold determined by Otsu’s method
 _, otsu_thresholded_image = cv2.threshold(grayscale_image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
 cv2.imwrite('out/assignment7.jpg', addName(otsu_thresholded_image))
 
-# -- assignment 8 --
+# -- Assignment 8 --
 # Adaptively threshold the grayscale version of painting2.jpg
 painting_image = cv2.imread('img/painting2.jpg', cv2.IMREAD_GRAYSCALE)
 
@@ -69,7 +69,7 @@ adaptive_thresholded_image = cv2.adaptiveThreshold(
 
 cv2.imwrite('out/assignment8.jpg', addName(adaptive_thresholded_image))
 
-# -- assignment 9 --
+# -- Assignment 9 --
 # Remove the white noise from whitenoise.png by Gaussian filtering
 whitenoise_image = cv2.imread('img/whitenoise.png')
 

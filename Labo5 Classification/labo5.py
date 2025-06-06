@@ -1,3 +1,4 @@
+import os
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
@@ -217,6 +218,7 @@ def assignment4():
 
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     # print("Assignment 1:")
     # assignment1()
     # print("Assignment 2:")
